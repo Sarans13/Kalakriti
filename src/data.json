@@ -1,0 +1,160 @@
+{
+    "data": [
+        {
+            "navbarLinks": [
+                { "id": 1, "title": "HOME", "link": "home" },
+                { "id": 2, "title": "ABOUT US", "link": "about" },
+                { "id": 3, "title": "PRICES", "link": "qualities" },
+                { "id": 4, "title": "SERVICES", "link": "menu" },
+                { "id": 5, "title": "TEAM", "link": "team" },
+                { "id": 6, "title": "SIGN UP", "link": "reservation" }
+            ],
+            "ourQualitiesForCustomers" : [
+            {
+                "id": 1,
+                "image": "./Prices-1.jpg",
+                "title": "FREEMIUM LUXURY",
+                "description": "We Provide A simple call with limited time to the experts. You can provide photograph of the site and get suggestions for the limited time for the fabrics and furnitures." 
+            },
+            {
+                "id": 2,
+                "image": "./Prices-2.jpg",
+                "title": "AFFORD LUXURY",
+                "description": "Enjoy unlimited consultation with experts during scheduled sessions. Share photos of your space for personalized fabric and furniture suggestions. You can also book carpenters and workers independently for your projects." 
+            },
+            {
+                "id": 3,
+                "image": "./Prices-3.jpg",
+                "title": "PREMIUM LUXURY",
+                "description": "Your Interior designer will exclusively visit your site and based on your requirements your home will be build." 
+            }
+        ],
+        "services": [
+            {
+                "id": 1,
+                "image": "./Service-1.jpeg",
+                "title": "Easy Connect with Designer",
+                "category": "Customer Service"
+            },
+            {
+                "id": 2,
+                "image": "./Service-2.jpg",
+                "title": "Connect with various craftsmen",
+                "category": "Customer Service"
+            },
+            {
+                "id": 3,
+                "image": "./Service-3.jpeg",
+                "title": "Explore ways to utilize your exsisting furniture",
+                "category": "Customer Service"
+            },
+            {
+                "id": 4,
+                "image": "./Service-4.jpg",
+                "title": "Precison made accessible & achievable",
+                "category": "Planner Service"
+            },
+            {
+                "id": 5,
+                "image": "./Service-5.jpg",
+                "title": "Trust for better home",
+                "category": "Customer Service"
+            },
+            {
+                "id": 6,
+                "image": "./Service-6.jpg",
+                "title": "Apt textures and furnitures perfect for home.",
+                "category": "Customer & craftsmen service"
+            },
+            {
+                "id": 7,
+                "image": "./Service-7.jpg",
+                "title": "Budget friendly planning",
+                "category": "Customer Service"
+            },
+            {
+                "id": 8,
+                "image": "./Service-8.jpg",
+                "title": "Morally Generating opportunities for our localities",
+                "category": "Craftsmen service"
+            }
+        ],
+        "who_we_are": [
+            {
+                "id": 1,
+                "number": "138437+",
+                "title": "Local Carpenters"
+            },
+            {
+                "id": 2,
+                "number": "38900+",
+                "title": "Interior designers"
+            },
+            {
+                "id": 3,
+                "number": "3.8 billion+",
+                "title": "Middle Class individuals"
+            },
+            {
+                "id": 4,
+                "number": "1.8 billion +",
+                "title": "Market Size"
+            }
+        ],
+        "team": [
+            {
+                "id": 1,
+                "image": "./Sarans.jpeg",
+                "name": "Sarans Mishra",
+                "designation": "Founder & Developer"
+            }
+        ],
+        "planner": [
+            {
+                "id": 1,
+                "name": "Designer-1",
+                "image": "./Person (3).jpg"
+            },
+            {
+                "id": 2,
+                "name": "Designer-2",
+                "image": "./Person (4).jpg"
+            },
+            {
+                "id": 3,
+                "name": "Designer-3",
+                "image": "./Person (3).jpg"
+            },
+            {
+                "id": 4,
+                "name": "Designer-4",
+                "image": "./Person (4).jpg"
+            }
+        ],
+        "transactions": [
+            {
+                "name":"sara",
+                "orderTime": 1
+            },
+            {
+                "name":"sara",
+                "orderTime": 1
+            },
+            {
+                "name":"sara",
+                "orderTime": 1
+            },
+            {
+                "name":"sara",
+                "orderTime": 1
+            },
+            {
+                "name":"sara",
+                "orderTime": 1
+            }
+
+        ]
+        }
+    ]
+}
+

@@ -1,25 +1,27 @@
-import logo from './logo.svg';
+// Imports ---------------------------------------------------
+import './App.css';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
+import Home from './Pages/Home';
+import NotFound from './Pages/NotFound';
+import Success from './Pages/Success';
+import Dashboard from './Pages/Dashboard';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/success' element={<Success/>}/>
+          <Route path='*' element={<NotFound/>}/>
+          <Route path='/Dashboard' element={<Dashboard/>}/>
+        </Routes>
+        <Toaster/>
+      </BrowserRouter>
+    </>
+  )
 }
 
 export default App;

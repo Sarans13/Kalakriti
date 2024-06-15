@@ -1,0 +1,48 @@
+<svg width="1440" height="6000" viewBox="0 0 1440 6000" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <mask id="mask0_413_59" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="1440" height="6000">
+    <rect width="1440" height="6000" fill="white" />
+  </mask>
+  <g mask="url(#mask0_413_59)">
+    <g filter="url(#filter0_f_413_59)">
+      <circle cx="1299.5" cy="19.5" r="167.5" fill="#34D399" /> 
+    </g>
+    <g filter="url(#filter1_f_413_59)">
+      <circle cx="1311" cy="329" r="179" fill="#065F46" /> 
+    </g>
+    <circle cx="320" cy="50" r="150" fill="url(#grad1)" />
+    <circle cx="900" cy="600" r="100" fill="url(#grad2)" />
+    <circle cx="100" cy="600" r="120" fill="url(#grad3)" />
+    <circle cx="800" cy="900" r="100" fill="url(#grad1)" />
+    <circle cx="1200" cy="1500" r="150" fill="url(#grad2)" />
+    <circle cx="100" cy="1800" r="180" fill="url(#grad3)" />
+    <circle cx="1350" cy="2400" r="150" fill="url(#grad1)" />
+    <circle cx="100" cy="2700" r="100" fill="url(#grad2)" />
+    <circle cx="1350" cy="3750" r="120" fill="url(#grad3)" />
+    <circle cx="50" cy="4050" r="400" fill="url(#grad3)" />
+    <circle cx="1350" cy="4700" r="400" fill="url(#grad3)" />
+  </g>
+  <defs>
+    <filter id="filter0_f_413_59" x="732" y="-548" width="1135" height="1135" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur_413_59"/>
+    </filter>
+    <filter id="filter1_f_413_59" x="732" y="-250" width="1158" height="1158" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+      <feGaussianBlur stdDeviation="200" result="effect1_foregroundBlur_413_59"/>
+    </filter>
+    <radialGradient id="grad1" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dbefe8;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="grad2" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dbefe8;stop-opacity:1" />
+    </radialGradient>
+    <radialGradient id="grad3" cx="0.5" cy="0.5" r="0.5" fx="0.5" fy="0.5">
+      <stop offset="0%" style="stop-color:#FFFFFF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#dbefe8;stop-opacity:1" />
+    </radialGradient>
+  </defs>
+</svg>
