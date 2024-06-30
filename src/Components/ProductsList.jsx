@@ -12,7 +12,6 @@ const ProductsList = () => {
   const [planner, setPlanner] = useState("");
   const [vendor, setVendor] = useState("");
   const [userType, setUserType] = useState("");
-  const [show, setShow] = useState(false);
   const [showModal, setShowModal] = useState(false);
   const [selectedId, setSelectedId] = useState(null);
 

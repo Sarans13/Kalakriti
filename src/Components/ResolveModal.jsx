@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import "../Styles/LoginModal.css";
 import axios from "axios";
 import toast from "react-hot-toast";
-import { useNavigate } from "react-router-dom";
 
 const ResolveModal = ({ showModal, setShowModal, transactionId, userId }) => {
   const [description, setDescription] = useState("");
