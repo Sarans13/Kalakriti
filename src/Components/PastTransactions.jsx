@@ -40,26 +40,26 @@ const PastTransactions = () => {
   // render the type of info
   const renderTransactionDetails = (transaction) => {
     return (
-      <Flex vertical>
+      <div style={{ display: 'flex', flexDirection: 'column' }}>
         {transaction.createdBy !== userId && (
-          <Flex>
-            <Typography.Text strong> Created By: </Typography.Text>
-            {transaction.createdByName}
-          </Flex>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <strong>Created By:</strong>
+            <p style={{ fontWeight: 'normal', color: '#04a67d' }}>{transaction.createdByName}</p>
+          </div>
         )}
         {transaction.customer !== "undefined" && (
-          <Flex>
-            <Typography.Text strong> Customer: </Typography.Text>
-            {transaction.customerName}
-          </Flex>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <strong>Customer:</strong>
+            <p style={{ fontWeight: 'normal', color: '#04a67d' }}>{transaction.customerName}</p>
+          </div>
         )}
         {transaction.createdFor !== userId && (
-          <Flex>
-            <Typography.Text strong> Created For: </Typography.Text>
-            {transaction.createdForName}
-          </Flex  >
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
+            <strong>Created For:</strong>
+            <p style={{ fontWeight: 'normal', color: '#04a67d' }}>{transaction.createdForName}</p>
+          </div>
         )}
-      </Flex>
+      </div>
     );
   };
 

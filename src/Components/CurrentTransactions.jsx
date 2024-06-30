@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { List, Avatar, Typography, Flex, Image } from "antd";
+import { List, Avatar, Image, Typography } from "antd";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import ResolveModal from "./ResolveModal";
@@ -43,26 +43,32 @@ const CurrentTransactions = () => {
   // render the type of info
   const renderTransactionDetails = (transaction) => {
     return (
-      <Flex vertical>
+      <div style={{ display: "flex", flexDirection: "column" }}>
         {transaction.createdBy !== userId && (
-          <Flex>
-            <Typography.Text strong> Created By: </Typography.Text>
-            {transaction.createdByName}
-          </Flex>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <strong>Created By:</strong>
+            <p style={{ fontWeight: "normal", color: "#04a67d" }}>
+              {transaction.createdByName}
+            </p>
+          </div>
         )}
         {transaction.customer !== "undefined" && (
-          <Flex>
-            <Typography.Text strong> Customer: </Typography.Text>
-            {transaction.customerName}
-          </Flex>
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <strong>Customer:</strong>
+            <p style={{ fontWeight: "normal", color: "#04a67d" }}>
+              {transaction.customerName}
+            </p>
+          </div>
         )}
         {transaction.createdFor !== userId && (
-          <Flex>
-            <Typography.Text strong> Created For: </Typography.Text>
-            {transaction.createdForName}
-          </Flex  >
+          <div style={{ display: "flex", flexDirection: "column" }}>
+            <strong>Created For:</strong>
+            <p style={{ fontWeight: "normal", color: "#04a67d" }}>
+              {transaction.createdForName}
+            </p>
+          </div>
         )}
-      </Flex>
+      </div>
     );
   };
 
@@ -70,12 +76,19 @@ const CurrentTransactions = () => {
   const [showModal, setShowModal] = useState(false);
 
   return (
-    <Flex vertical gap="small">
-      <Flex align="center" justify="space-between" gap="large">
+    <div style={{ display: "flex", flexDirection: "column", gap: "small" }}>
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: "large",
+        }}
+      >
         <Typography.Title level={3} strong style={{ marginBottom: "0px" }}>
           Current Transactions
         </Typography.Title>
-      </Flex>
+      </div>
       <List
         pagination={{ pageSize: 5 }}
         dataSource={currentTransactions}
@@ -100,16 +113,18 @@ const CurrentTransactions = () => {
               title={renderTransactionDetails(transaction)}
               description={transaction.description}
             />
-            <span>
-              <button
-                onClick={() => {
-                  setShowModal(true);
-                  setTransactionId(transaction.transactionId);
-                }}
-              >
-                Resolve
-              </button>
-            </span>
+            {userType !== "Customer" && (
+              <span>
+                <button
+                  onClick={() => {
+                    setShowModal(true);
+                    setTransactionId(transaction.transactionId);
+                  }}
+                >
+                  Resolve
+                </button>
+              </span>
+            )}
           </List.Item>
         )}
       />
@@ -119,7 +134,7 @@ const CurrentTransactions = () => {
         userId={userId}
         transactionId={transactionId}
       />
-    </Flex>
+    </div>
   );
 };
 
