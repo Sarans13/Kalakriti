@@ -24,6 +24,7 @@
 .Logo{
     font-size: 1.5rem;
     margin: 30px 0;
+    background: url(../Images/logo.png);
 }
 
 .header{

@@ -1,3 +1,4 @@
+// Imports ----------------------------------------------------------------
 import React, { useState } from "react";
 import { HiOutlineArrowNarrowRight } from "react-icons/hi";
 import axios from "axios";
@@ -6,50 +7,56 @@ import { useNavigate } from "react-router-dom";
 import "../Styles/SignUp.css";
 
 const SignUp = () => {
+
+  // Making use states for the filling the signup form ----------------------
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [rePassword, setRePassword] = useState("");
-  const [phone, setPhone] = useState(0);
+  const [phone, setPhone] = useState("");
   const [userType, setUserType] = useState("");
+  const [address, setAddress] = useState("");
   const navigate = useNavigate();
-
+ 
+  //Backend fetch api call ---------------------------------------------------
   const handleSignup = async (e) => {
     e.preventDefault();
     try {
-      // const { data } = await axios.post(
-      //   "http://localhost:4000/reservation/send",
-      //   { firstName, lastName, email, phone, date, time, userType },
-      //   {
-      //     headers: {
-      //       "Content-Type": "application/json",
-      //     },
-      //     withCredentials: true,
-      //   }
-      // );
-      // toast.success(data.message);
-      toast.success("Sarans You did it!");
+      if(password !== rePassword){
+        toast.error("Password and Re-Password do not match");
+        return;
+      }
+      const { data } = await axios.post(
+        "https://kalakriti-backend-nfdm.onrender.com/signup",
+        { firstName, lastName, email, phone, userType, address, password },
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+          withCredentials: true,
+        }
+      );
+      toast.success(data.message);
       setFirstName("");
       setLastName("");
       setPhone(0);
       setEmail("");
       setPassword("");
       setRePassword("");
-      setUserType(""); // Reset user type
+      setUserType("");
       navigate("/success");
     } catch (error) {
       toast.error(error.response.data.message);
-    }
+    }  
   };
-
   return (
     <section className="reservation" id="reservation">
       <div className="container">
         <div className="banner">
           <img src="Register.jpg" alt="res" />
         </div>
-        <div className="banner">
+        <div className="banner">  
           <div className="reservation_form_box">
             <h1>JOIN US</h1>
             <p>For Further Questions, Please enquire</p>
@@ -68,20 +75,6 @@ const SignUp = () => {
                   onChange={(e) => setLastName(e.target.value)}
                 />
               </div>
-              {/* <div>
-                <input
-                  type="date"
-                  placeholder="Date"
-                  value={date}
-                  onChange={(e) => setDate(e.target.value)}
-                />
-                <input
-                  type="time"
-                  placeholder="Time"
-                  value={time}
-                  onChange={(e) => setTime(e.target.value)}
-                />
-              </div> */}
               <div>
                 <input
                   type="email"
@@ -101,12 +94,19 @@ const SignUp = () => {
                 <select
                   value={userType}
                   onChange={(e) => setUserType(e.target.value)}
+                  padding={{padding : 0}}
                 >
-                  <option value="">Select User Type</option>
-                  <option value="Customer">Customer</option>
-                  <option value="Interior Designer">Interior Designer</option>
-                  <option value="Worker/Carpenter">Worker/Carpenter</option>
+                  <option value="" style={{padding : 0}}>Select User Type</option>
+                  <option value="Customer" padding={{padding : 0}}>Customer</option>
+                  <option value="Interior Designer" padding={{padding : 0}}>Interior Designer</option>
+                  <option value="Worker/Carpenter" padding={{padding : 0}}>Worker/Carpenter</option>
                 </select>
+                <input
+                  type="text"
+                  placeholder="Place of Service"
+                  value={address}
+                  onChange={(e) => setAddress(e.target.value)}
+                />
               </div>
               <div>
                 <input
@@ -139,3 +139,5 @@ const SignUp = () => {
 };
 
 export default SignUp;
+
+

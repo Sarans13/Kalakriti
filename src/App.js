@@ -6,6 +6,7 @@ import Home from './Pages/Home';
 import NotFound from './Pages/NotFound';
 import Success from './Pages/Success';
 import Dashboard from './Pages/Dashboard';
+import SignUp from './Components/SignUp';
 import './App.css';
 
 function App() {
@@ -16,7 +17,8 @@ function App() {
           <Route path='/' element={<Home/>}/>
           <Route path='/success' element={<Success/>}/>
           <Route path='*' element={<NotFound/>}/>
-          <Route path='/Dashboard' element={<Dashboard/>}/>
+          <Route path='/dashboard/:userId' element={<Dashboard/>}/>
+          <Route path='/signup' element={<SignUp />}/>
         </Routes>
         <Toaster/>
       </BrowserRouter>
